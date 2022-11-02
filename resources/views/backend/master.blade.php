@@ -48,7 +48,7 @@
             <div class="tiles default"></div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div id="right-sidebar" class="settings-panel">
         <i class="settings-close ti-close"></i>
         <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
@@ -58,7 +58,7 @@
           <li class="nav-item">
             <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
           </li>
-        </ul>
+        </ul> -->
         <div class="tab-content" id="setting-content">
           <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
             <div class="add-items d-flex px-3 mb-0">
@@ -198,7 +198,7 @@
           </div>
           <!-- chat tab ends -->
         </div>
-      </div>
+      </div> -->
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
      

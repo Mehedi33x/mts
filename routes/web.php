@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,5 +13,10 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//backend
 Route::get('/',[HomeController::class,'home']);
 Route::get('/dashboard',[HomeController::class,'dashboard']);
+
+//user
+Route::get('/user',[UserController::class,'user']);
