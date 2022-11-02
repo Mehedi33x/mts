@@ -20,3 +20,4 @@ Route::get('/dashboard',[HomeController::class,'dashboard']);
 
 //user
 Route::get('/user',[UserController::class,'user']);
+Route::get('/add',[UserController::class,'useradd']);

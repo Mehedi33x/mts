@@ -2,7 +2,7 @@
 @section('content')
 <h1>User List</h1>
 
-<a href="{{url('/user/add')}}" class="btn btn-success">
+<a href="{{url('/add')}}" class="btn btn-success">
 Add New User
 </a>
 <table class="table table-striped">
