@@ -1,19 +1,19 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/dashboard')}}">
+            <a class="nav-link" href="{{route('/')}}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/user')}}">
+            <a class="nav-link" href="{{route('user')}}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">User</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{route('train')}}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Train</span>
             </a>
@@ -21,7 +21,7 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html">
               <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Class</span>
+              <span class="menu-title">Coach</span>
             </a>
           </li>
 
@@ -42,7 +42,7 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html">
               <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Train</span>
+              <span class="menu-title">Payment</span>
             </a>
           </li>
 

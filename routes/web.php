@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TrainController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +16,17 @@ use App\Http\Controllers\UserController;
 */
 
 //backend
-Route::get('/',[HomeController::class,'home']);
-Route::get('/dashboard',[HomeController::class,'dashboard']);
+//Dashboard
+Route::get('/',[HomeController::class,'dashboard'])->name('/');
 
 //user
-Route::get('/user',[UserController::class,'user']);
-Route::get('/add',[UserController::class,'useradd']);
+Route::get('/user',[UserController::class,'user'])->name("user");
+Route::get('user/add_user',[UserController::class,'useradd'])->name('user.add');
 Route::post('/user/store',[UserController::class,'submit'])->name('user.submit');
+
+
+//train
+Route::get('/train',[TrainController::class,'train'])->name('train');
+Route::get('train/add_train',[TrainController::class,'addtrain'])->name('train.add');
+
+Route::post('train/add_train',[TrainController::class,'store'])->name('train.store');
