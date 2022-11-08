@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->string("train_name");
-            $table->string("train_id");
-            $table->integer("seats");
+            $table->integer("seats")->nullable();
             $table->string("from");
             $table->string("to");
             $table->string("status");

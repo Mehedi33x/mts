@@ -11,7 +11,6 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Train Name</th>
-      <th scope="col">Train ID</th>
       <th scope="col">Seats</th>
       <th scope="col">From</th>
       <th scope="col">To</th>
@@ -19,44 +18,18 @@
     </tr>
   </thead>
   <tbody>
+  @foreach($trains as $data)
     <tr>
-      <th scope="row">1</th>
-      <td>Space</td>
-      <td>1120</td>
-      <td>150</td>
-      <td>Chowrasta</td>
-      <td>Boardbazar</td>
-      <td>Yes</td>
+      <td>{{$data->id}}</td>
+      <td>{{$data->train_name}}</td>
+      <td>{{$data->seats}}</td>
+      <td>{{$data->from}}</td>
+      <td>{{$data->to}}</td>
+      <td>{{$data->status}}</td>
     </tr>
-
-    <th scope="row">2</th>
-      <td>Naruta</td>
-      <td>1121</td>
-      <td>250</td>
-      <td>Vogra</td>
-      <td>Tongi</td>
-      <td>No</td>
-    </tr>
-
-    <th scope="row">3</th>
-      <td>Mycan</td>
-      <td>1122</td>
-      <td>150</td>
-      <td>Vogra</td>
-      <td>Mirpur</td>
-      <td>Yes</td>
-    </tr>
-
-    <th scope="row">4</th>
-      <td>Falcon</td>
-      <td>1124</td>
-      <td>150</td>
-      <td>Tongi</td>
-      <td>Mirpur</td>
-      <td>No</td>
-    </tr>
+    @endforeach
     
   </tbody>
-</table>
-
+</table> <br><br>
+{{$trains->links()}}
 @endsection

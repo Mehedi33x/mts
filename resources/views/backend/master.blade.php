@@ -214,6 +214,7 @@
         <!-- partial:partials/_footer.html -->
         
 <!-- footer split -->
+  
 
         @include('backend.fixed.footer')
         <!-- partial -->

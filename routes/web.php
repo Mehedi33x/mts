@@ -26,7 +26,9 @@ Route::post('/user/store',[UserController::class,'submit'])->name('user.submit')
 
 
 //train
-Route::get('/train',[TrainController::class,'train'])->name('train');
-Route::get('train/add_train',[TrainController::class,'addtrain'])->name('train.add');
+// Route::get('/train',[TrainController::class,'train'])->name('train');
+Route::get('/train/add_train',[TrainController::class,'addtrain'])->name('train.add');
+//train post
+Route::post('/train/add_train',[TrainController::class,'store'])->name('train.store');
 
-Route::post('train/add_train',[TrainController::class,'store'])->name('train.store');
+Route::get('/fetch_train',[TrainController::class,'fetch'])->name('fetch');

@@ -13,7 +13,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('train')}}">
+            <a class="nav-link" href="{{route('fetch')}}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Train</span>
             </a>

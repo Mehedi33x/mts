@@ -4,9 +4,7 @@
 <br>
 <form action="{{route('train.store')}}" method="post">
     @csrf
-    <label for="id">Train ID</label>
-   <input id="id" input type="text" class="form-control" name='id' uniqid>
-
+    
    <label for="name">Train Name</label>
    <input id="name" input type="text" class="form-control" name='name'>
 
@@ -21,12 +19,10 @@
 
    <label for="cars">Train Status</label>
 
-<select id="cars" class="form-control">
+<select id="cars" class="form-control" name='status'>
   <option value="active">Active</option>
   <option value="inactive">Inactive</option>
 </select> <br>
   <button type="submit" class="btn btn-success mt-2" >Submit</button>
-
 </form>
-
 @endsection
