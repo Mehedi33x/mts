@@ -8,20 +8,23 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function user(){
-        return view ('backend.pages.user.user');
+        $user=User::all();
+        return view ('backend.pages.user.user',compact('user'));
     }
     public function useradd(){
         return view ('backend.pages.user.adduser');
     }
-    public function submit(Request $request){
-        // dd($request->all ());
+    public function submit(Request $submit){
+        //dd($submit->all ());
 
         User::create([
-            'name'=>$request->name,
-            'email'=>$request->email,
-            'password'=>$request->password
+            'name'=>$submit->name,
+            'email'=>$submit->email,
+            'contact'=>$submit->contact,
+            'address'=>$submit->address,
+            'password'=>$submit->password,
         ]);
 
-        return redirect()->route();
+        return redirect()->route('user');
     }
 }

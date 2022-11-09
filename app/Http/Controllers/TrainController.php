@@ -13,7 +13,7 @@ class TrainController extends Controller
         }
 
     public function store(Request $request){
-        // dd( $request->all());
+        //dd( $request->all());
         Train::create([
             'train_name'=>$request->name,
             'seats'=>$request->seats,
@@ -25,7 +25,7 @@ class TrainController extends Controller
             return redirect()->route('fetch');
     }
     public function fetch(){
-        $trains=Train::paginate(3);
+        $trains=Train::paginate(10);
         return view('backend.pages.train.train',compact('trains'));
     }
 

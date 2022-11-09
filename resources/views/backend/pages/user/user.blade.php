@@ -2,7 +2,8 @@
 @section('content')
 <h1>User List</h1>
 
-<a href="{{route('user.add')}}"><p align="right">
+<a href="{{route('user.add')}}">
+  <p style='float:right; display:inline-block'>
   <input type="button" class="btn btn-success" value="Add New User" />
 </p>
 
@@ -11,37 +12,30 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th scope="col">#</th> 
+      <th scope="col">id</th> 
       <th scope="col">Name</th> 
       <th scope="col">Email</th> 
       <th scope="col">Contact</th> 
       <th scope="col">Address</th> 
+      <th scope="col">Action</th> 
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Rahim</td>
-      <td>Rahim@gmail.com</td>
-      <td>015248924</td>
-      <td>Gazipur,Dhaka</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Karim</td>
-      <td>Karim@gmail.com</td>
-      <td>018248924</td>
-      <td>Tongi,Dhaka</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Monir</td>
-      <td>Monir@gmail.com</td>
-      <td>017248924</td>
-      <td>Mirpur,Dhaka</td>
-    </tr>
-  </tbody>
-</table>
+<tbody>
+  @foreach($user as $key=>$data)
+  <tr>
+    <td scope="col">{{$key+1}}</td>
+    <td scope="col">{{$data->name}}</td>
+    <td scope="col">{{$data->email}}</td>
+    <td scope="col">{{$data->contact}}</td>
+    <td scope="col">{{$data->address}}</td>
+    <td scope="col">
+      <a href="" class="btn btn-danger">Delete</a>
+      <a href="" class="btn btn-info">Update</a>
+      <a href="" class="btn btn-secondary">Edit</a>
+    </td>
+
+  </tr>
+  @endforeach
 </tbody>
 </table>
 

@@ -2,8 +2,10 @@
 @section('content')
 <h1>Train List</h1>
 
-<a href="{{route('train.add')}}"><p align="right">
-  <input type="button" class="btn btn-success" value="Add New Train"/></p></a>
+<a href="{{route('train.add')}}">
+  <p style='float:right; display:inline-block'>
+  <input type="button" class="btn btn-success" value="Add New Train"/></p>
+</a>
 <br><br>
 
 <table class="table table-bordered">
