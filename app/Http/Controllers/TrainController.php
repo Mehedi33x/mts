@@ -14,6 +14,17 @@ class TrainController extends Controller
 
     public function store(Request $request){
         //dd( $request->all());
+        // //empty variable name->validate([
+        //     pass in array 
+        //     'input field name'=> required,
+        // ])
+
+        $request->validate([
+            'name'=>'required', //learn how to do unique here??
+            'from'=>'required',
+            'to'=>'required'
+        ]);
+
         Train::create([
             'train_name'=>$request->name,
             'seats'=>$request->seats,

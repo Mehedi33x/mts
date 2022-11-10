@@ -16,6 +16,13 @@ class UserController extends Controller
     }
     public function submit(Request $submit){
         //dd($submit->all ());
+        $submit->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'contact'=>'required',
+            'password'=>'required',
+
+        ]);
 
         User::create([
             'name'=>$submit->name,
