@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Train;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\TrainController;
 
 class TrainController extends Controller
@@ -18,7 +19,6 @@ class TrainController extends Controller
         //     pass in array 
         //     'input field name'=> required,
         // ])
-
         $request->validate([
             'name'=>'required', //learn how to do unique here??
             'from'=>'required',

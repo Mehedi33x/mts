@@ -6,7 +6,7 @@
   <label for="name">User Name</label>
   <input id="name" type="text" class="form-control" name="name" required> <br>
   <label for="email">Email</label>
-  <input id="email" type="email" class="form-control" name="email" required> <br>
+<input id="email" type="email" class="form-control" name="email" required> <br>
   <label for="contact">Contact</label>
   <input id="contact" type="text" class="form-control" name="contact" required><br>
   <label for="address">Address</label>

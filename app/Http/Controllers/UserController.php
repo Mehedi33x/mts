@@ -34,4 +34,9 @@ class UserController extends Controller
 
         return redirect()->route('user');
     }
+
+    public function userDelete($id){
+        User::find($id)->delete();
+        return back();
+    }
 }

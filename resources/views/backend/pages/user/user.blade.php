@@ -29,9 +29,9 @@
     <td scope="col">{{$data->contact}}</td>
     <td scope="col">{{$data->address}}</td>
     <td scope="col">
-      <a href="" class="btn btn-danger">Delete</a>
-      <a href="" class="btn btn-info">Update</a>
+      <a href="" class="btn btn-info">View</a>
       <a href="" class="btn btn-secondary">Edit</a>
+      <a href="{{route('user.delete',$data->id)}}" class="btn btn-danger">Delete</a>
     </td>
 
   </tr>
