@@ -35,7 +35,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{route('ticket.list')}}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Ticket List</span>
             </a>

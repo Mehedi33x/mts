@@ -1,14 +1,48 @@
 @extends('backend.master')
 @section('content')
 <h1>User List</h1>
+<!-- Button trigger modal -->
+<p style='float:right; display:inline-block'>
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#user">
+ Add new user
+</button></p>
 
-<a href="{{route('user.add')}}">
-  <p style='float:right; display:inline-block'>
-  <input type="button" class="btn btn-success" value="Add New User" />
-</p>
+<!-- Modal and Form -->
 
-</a><br><br>
+<form action="{{route('user.submit')}}" method="post">
+@csrf
+<div class="modal fade" id="user" tabindex="-1" aria-labelledby="userLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="userLabel">Add New User</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <label for="name">User Name</label>
+  <input id="name" type="text" class="form-control" name="name" required> <br>
+  <label for="email">Email</label>
+<input id="email" type="email" class="form-control" name="email" required> <br>
+  <label for="contact">Contact</label>
+  <input id="contact" type="text" class="form-control" name="contact" required><br>
+  <label for="address">Address</label>
+  <input id="address" type="text" class="form-control" name="address"><br>
+  <label for="password">Password</label>
+  <input id="password" type="password" class="form-control" name="password" required>
+  <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success" >Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+</form>
+
+
+<!-- tablee -->
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -29,7 +63,7 @@
     <td scope="col">{{$data->contact}}</td>
     <td scope="col">{{$data->address}}</td>
     <td scope="col">
-      <a href="" class="btn btn-info">View</a>
+      <a href="{{route('user.view',$data->id)}}" class="btn btn-info">View</a>
       <a href="" class="btn btn-secondary">Edit</a>
       <a href="{{route('user.delete',$data->id)}}" class="btn btn-danger">Delete</a>
     </td>

@@ -36,7 +36,15 @@ class UserController extends Controller
     }
 
     public function userDelete($id){
-        User::find($id)->delete();
+        $test=User::find($id)->delete();
         return back();
     }
+    public function viewuser($user_id)
+    {
+      $test=User::find($user_id);
+      return view('backend.pages.user.view',compact('test'));
+    }
+
+
+
 }
