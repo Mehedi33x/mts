@@ -29,10 +29,10 @@ class UserController extends Controller
             'email'=>$submit->email,
             'contact'=>$submit->contact,
             'address'=>$submit->address,
-            'password'=>$submit->password,
+            'password'=>bcrypt($submit->password),
         ]);
 
-        return redirect()->route('user');
+        return redirect()->route('user')->with('message','Data created successfully');
     }
 
     public function userDelete($id){

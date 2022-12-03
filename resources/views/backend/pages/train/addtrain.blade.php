@@ -2,7 +2,7 @@
 @section('content')
  <h1>Add a new Train</h1>
 <br>
-<form action="{{route('train.store')}}" method="post">
+<form action="" method="post">
     @csrf
     
    <label for="name">Train Name</label>
@@ -18,8 +18,7 @@
    <input id="to" input type="text" class="form-control" name='to'required>
 
    <label for="cars">Train Status</label>
-
-<select id="cars" class="form-control" name='status'>
+<select id="cars" class="form-control" name=''>
   <option value="active">Active</option>
   <option value="inactive">Inactive</option>
 </select> <br>

@@ -42,7 +42,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{route('payment')}}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Payment List</span>
             </a>

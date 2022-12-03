@@ -1,14 +1,26 @@
 @extends('backend.master')
 @section('content')
+
+<!-- session message -->
+
+  @if(session()->has('message'))
+  <div class="alert alert-success">
+  {{session()->get('message')}}
+  </div>
+  @endif
+
+
+<!-- Heading Text -->
 <h1>User List</h1>
+
 <!-- Button trigger modal -->
 <p style='float:right; display:inline-block'>
 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#user">
  Add new user
 </button></p>
 
-<!-- Modal and Form -->
 
+<!-- Modal and Form -->
 <form action="{{route('user.submit')}}" method="post">
 @csrf
 <div class="modal fade" id="user" tabindex="-1" aria-labelledby="userLabel" aria-hidden="true">
@@ -38,9 +50,7 @@
     </div>
   </div>
 </div>
-
 </form>
-
 
 <!-- tablee -->
 <table class="table table-bordered">
@@ -74,3 +84,4 @@
 </table>
 
 @endsection
+

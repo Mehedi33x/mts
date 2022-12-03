@@ -10,13 +10,11 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Station Name</th>
+    <th scope="col">Station Name</th>
     <th scope="col">Location</th>
     <th scope="col">Tel-Number</th>
     <th scope="col">Routes</th>
-      <th scope="col">From</th>
-      <th scope="col">To</th>
-      <th scope="col">Status</th>
+    <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
